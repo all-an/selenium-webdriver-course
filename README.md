@@ -14,14 +14,21 @@ Automação de Testes com Selenium WebDriver e Java
 ## Requisitos para execução:
 
 - Java 17
-- Selenium
-- JUnit
-- Cucumber 1.2.5
+- Selenium 3
+- JUnit 5
+- Cucumber 7
 
 ## Criando projeto:
 
 ```bash
 mvn archetype:generate "-DarchetypeGroupId=io.cucumber" "-DarchetypeArtifactId=cucumber-archetype" "-DarchetypeVersion=7.0.0" "-DgroupId=course-selenium" "-DartifactId=course-selenium" "-Dpackage=course-selenium" "-Dversion=1.0.0-SNAPSHOT" "-DinteractiveMode=false"
+```
+
+## Criando reports com Cluecumber
+
+```bash
+mvn cluecumber-report:reporting
+
 ```
 
 ## Dependências:
