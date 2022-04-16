@@ -88,11 +88,11 @@ font-src * data: blob: 'unsafe-inline';"/>
       {
         "data": [
           1,
-          3,
+          2,
           5,
           0,
-          4,
-          0
+          0,
+          1
         ],
         "backgroundColor": [
           "rgba(40, 167, 69, 1.000)",
@@ -271,7 +271,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2022-04-15 16:30:35</span>
+            <span class="text-light">2022-04-15 16:43:29</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -300,9 +300,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2022-04-15 16:30:05</li>
-                <li class="list-group-item">Ended on:<br>2022-04-15 16:30:19</li>
-            <li class="list-group-item">Test Runtime:<br>0m 14s 900ms</li>
+                <li class="list-group-item">Started on:<br>2022-04-15 16:43:13</li>
+                <li class="list-group-item">Ended on:<br>2022-04-15 16:43:25</li>
+            <li class="list-group-item">Test Runtime:<br>0m 11s 682ms</li>
             <li class="list-group-item">            </li>
             </div>
         </div>
@@ -317,11 +317,11 @@ font-src * data: blob: 'unsafe-inline';"/>
 
                 </li>
                 <li class="list-group-item">
-                    4 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    3 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
-                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
                     <br>
@@ -354,7 +354,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 03s 410ms
+                                0m 02s 584ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -373,7 +373,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 05s 246ms
+                                0m 05s 234ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -392,7 +392,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 107ms
+                                0m 00s 101ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -402,7 +402,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                         </div>
 
 
-                        <div class="row row_passed table-row-passed">
+                        <div class="row row_failed table-row-failed">
                             <div class="col-9 text-left">
                                 <span class="text-left">4.</span>
                                 <span data-toggle="tooltip" title="steps.DescontoStep.eu_vejo_o_codigo_de_desconto()">
@@ -411,13 +411,26 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 04s 353ms
+                                0m 00s 078ms
                             </div>
                             <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">org.opentest4j.AssertionFailedError: O cupom est&#195;&#161; errado ==&#62; expected: &#60;QAZANDO15OFFX&#62; but was: &#60;QAZANDO15OFF&#62;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1152)
+	at pages.HomePage.verifyDiscountCoupon(HomePage.java:50)
+	at steps.DescontoStep.eu_vejo_o_codigo_de_desconto(DescontoStep.java:33)
+	at &#226;&#339;&#189;.eu vejo o codigo de desconto(classpath:features/desconto.feature:12)
+</pre>
+            </div>
+        </div>
                         </div>
                 </li>
             </div>
@@ -430,7 +443,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.8.0 - Report generated on 2022-04-15 16:30:35.</span>
+        <span>Cluecumber Report Plugin version 2.8.0 - Report generated on 2022-04-15 16:43:29.</span>
     </div>
 </footer>    </body>
     </html>

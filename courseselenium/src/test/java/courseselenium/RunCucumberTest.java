@@ -9,6 +9,7 @@ import org.junit.platform.suite.api.Suite;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static io.cucumber.junit.platform.engine.Constants.FILTER_TAGS_PROPERTY_NAME;
 import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @Suite
@@ -16,7 +17,8 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "json:target/reports/cucumber.json")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/reports/report.html")
+//@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/reports/report.html")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@cadastro-sucesso")
 public class RunCucumberTest {
 
     public static WebDriver driver;
