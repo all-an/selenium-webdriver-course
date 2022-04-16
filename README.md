@@ -17,6 +17,7 @@ Automação de Testes com Selenium WebDriver e Java
 - Selenium 3
 - JUnit 5
 - Cucumber 7
+- Cluecumber 2.8
 
 ## Criando projeto:
 
@@ -31,20 +32,44 @@ mvn cluecumber-report:reporting
 
 ```
 
-## Dependências:
+## Algumas Dependências:
 
 ```xml
 <dependency>
-    <groupId>info.cukes</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>1.2.5</version>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit-platform-engine</artifactId>
+    <scope>test</scope>
 </dependency>
-
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>7.2.3</version>
+    <scope>test</scope>
+</dependency>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
+<dependency>
+    <groupId>com.trivago.rta</groupId>
+    <artifactId>cluecumber-report-plugin</artifactId>
+    <version>2.8.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M5</version>
+</dependency>
+
+
 ```
 
 ## Autor do curso:
