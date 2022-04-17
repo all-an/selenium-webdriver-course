@@ -8,7 +8,7 @@ import pages.HomePage;
 
 public class DescontoStep{
 
-    HomePage homePage = new HomePage(RunCucumberTest.driver);
+    HomePage homePage = new HomePage();
 
     @Dado("que estou no site da qazando")
     public void que_estou_no_site_da_qazando() {

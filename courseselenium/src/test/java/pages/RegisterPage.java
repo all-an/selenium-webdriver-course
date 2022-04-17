@@ -3,13 +3,13 @@ package pages;
 import courseselenium.RunCucumberTest;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import runner.RunBase;
 import support.Utils;
 
-public class RegisterPage extends Utils {
+public class RegisterPage extends RunBase {
 
-    WebDriver driver;
+//    WebstartDriver() startDriver();
     private final By titleM = By.id("id_gender1");
     private final By titleF = By.id("id_gender2");
     private final By first_name_field = By.id("customer_firstname");
@@ -29,67 +29,67 @@ public class RegisterPage extends Utils {
 
     private final By bySubmitBtn = By.id("submitAccount");
 
-    public RegisterPage(WebDriver driver) {
-        this.driver = driver;
-    }
+//    public RegisterPage(WebstartDriver() startDriver()) {
+//        this.startDriver() = startDriver();
+//    }
 
     public void selectTitle(Integer type){
-        waitElementBePresent(titleM, 4);
-        waitElementBePresent(titleF, 3);
+        Utils.waitElementBePresent(titleM, 6);
+//        Utils.waitElementBePresent(titleF, 3);
         if(type == 1){
-            driver.findElement(titleM).click();
+            startDriver().findElement(titleM).click();
         }else if(type == 2){
-            driver.findElement(titleF).click();
+            startDriver().findElement(titleF).click();
         }
     }
 
     public void fillFirstName(String firstName){
-        driver.findElement(first_name_field).sendKeys(firstName);
+        startDriver().findElement(first_name_field).sendKeys(firstName);
     }
 
     public void fillLastName(String lastName){
-        driver.findElement(last_name_field).sendKeys(lastName);
+        startDriver().findElement(last_name_field).sendKeys(lastName);
     }
 
     public void fillPassword(String pass){
-        driver.findElement(password_field).sendKeys(pass);
+        startDriver().findElement(password_field).sendKeys(pass);
     }
 
     public void fillBirthDate(String day, String month, String year){
-        Select selectDay = new Select(driver.findElement(byDay));
+        Select selectDay = new Select(startDriver().findElement(byDay));
         selectDay.selectByValue(day);
 
-        Select selectMonth = new Select(driver.findElement(byMonth));
+        Select selectMonth = new Select(startDriver().findElement(byMonth));
         selectMonth.selectByValue(month);
 
-        Select selectYear = new Select(driver.findElement(byYear));
+        Select selectYear = new Select(startDriver().findElement(byYear));
         selectYear.selectByValue(year);
     }
 
     public void fillAddress(String address, String city, String state, String postCode, String phone){
-        driver.findElement(byAddress1).sendKeys(address);
-        driver.findElement(byCity).sendKeys(city);
+        startDriver().findElement(byAddress1).sendKeys(address);
+        startDriver().findElement(byCity).sendKeys(city);
 
-        Select selectState = new Select(driver.findElement(byState));
+        Select selectState = new Select(startDriver().findElement(byState));
         selectState.selectByValue(state);
 
-        driver.findElement(byPostCode).sendKeys(postCode);
+        startDriver().findElement(byPostCode).sendKeys(postCode);
 
         fillMobilePhone(phone);
 
     }
 
     public void fillMobilePhone(String phone){
-        driver.findElement(byPhoneMobile).sendKeys(phone);
+        startDriver().findElement(byPhoneMobile).sendKeys(phone);
     }
 
     public void clickRegister(){
-        driver.findElement(bySubmitBtn).click();
+        startDriver().findElement(bySubmitBtn).click();
     }
 
     public void registerValidation(String name, String lastName){
-        waitElementBePresent(By.className("myaccount-link-list"), 5);
-        String name_in_header = RunCucumberTest.driver
+        Utils.waitElementBePresent(By.className("myaccount-link-list"), 5);
+        String name_in_header = RunCucumberTest.startDriver()
                 .findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a/span")).getText();
         Assertions.assertEquals(name + " " + lastName, name_in_header, "Unsuccessful Registering");
     }

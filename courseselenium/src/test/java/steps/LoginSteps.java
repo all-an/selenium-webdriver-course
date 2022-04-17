@@ -1,12 +1,11 @@
 package steps;
 
-import courseselenium.RunCucumberTest;
 import io.cucumber.java.pt.Dado;
 import pages.LoginPage;
 
 public class LoginSteps {
 
-    LoginPage loginPage = new LoginPage(RunCucumberTest.driver);
+    LoginPage loginPage = new LoginPage();
 
     @Dado("que estou na tela de login")
     public void que_estou_na_tela_de_login() {

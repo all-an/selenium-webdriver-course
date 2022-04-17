@@ -8,14 +8,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utils {
 
-    public void waitElementBePresent(By element, int time){
+    public static void waitElementBePresent(By element, int time){
 
         WebDriverWait wait = new WebDriverWait(RunCucumberTest.driver, time);
         wait.until(ExpectedConditions.elementToBeClickable(element));
 
     }
 
-    public String getRandomEmail(){
+    public static String getRandomEmail(){
 
         String email_string = "allan_";
         String shortId = RandomStringUtils.random(6, "0123456789abcdefghijklmnopqrstuvxz.-_");

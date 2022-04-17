@@ -1,13 +1,12 @@
 package steps;
 
-import courseselenium.RunCucumberTest;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.RegisterPage;
 
 public class RegisterSteps {
 
-    RegisterPage registerPage = new RegisterPage(RunCucumberTest.driver);
+    RegisterPage registerPage = new RegisterPage();
 
     String name = "Allan";
     String lastName = "Abrahao";
@@ -29,7 +28,8 @@ public class RegisterSteps {
     }
 
     @Entao("vejo a mensagem de cadastro com sucesso")
-    public void vejo_a_mensagem_de_cadastro_com_sucesso() {
+    public void vejo_a_mensagem_de_cadastro_com_sucesso() {//
+
         registerPage.registerValidation(name , lastName);
     }
 
